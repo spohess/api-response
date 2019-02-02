@@ -1,14 +1,13 @@
-# Gerador Response
+# API Response
+###### v1.0.0
 
-### versão _1.0_
-
-Esse pacote é destinado a padronização da formatação das responses das APIs da Psychemedics onde, a formatação, segue o padrão a seguir:
+Pacote e padronização de response de API
 
 ```
 {
-    success:true,
-    statusCode:200,
-    message:enviando dados,
+    success: true,
+    statusCode: 200,
+    message: Requisição processada,
     data: []
 }
 ```
@@ -34,20 +33,20 @@ Esse pacote é destinado a padronização da formatação das responses das APIs
 ## Instalação
 
 ```
-composer require psychemedics/gerador-response
+composer require spohess/api-response
 ```
 
 ## Exemplo
 
 ### Laravel:
 ```
-use GeradorResponse\PsyAPI;
+use ApiResponse\BasicoApiResponse;
 
 public function getDados(Request $request)
 {
 
-    $retorno = PsyAPI::gerar($request->all(), 'Retornando request', 200, true);
+    $retorno = BasicoApiResponse::gerar($request->all(), 'Retornando request', 200, true);
 
-    return response()->json($retorno);
+    return response()->json($retorno, 200);
 } 
 ```
