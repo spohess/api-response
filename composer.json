@@ -1,0 +1,22 @@
+{
+    "name": "spohess/api-response",
+    "description": "Pacote de formatação de response",
+    "keywords": ["response"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sergio Hess",
+            "email": "sergio.hess@psychemedics.com.br"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ApiResponse\\": "src/"
+        }
+    }
+}
