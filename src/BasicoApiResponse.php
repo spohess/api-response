@@ -16,5 +16,14 @@ final class BasicoApiResponse extends AbstractApiResponse
             'data' => $data,
         ];
     }
+    
+    public static function gerarSlack($text, $response_type = 'in_channel')
+    {
+
+        return [
+            'response_type' => $response_type,
+            'text' => $text,
+        ];
+    }
 
 }
